@@ -31,13 +31,13 @@ int main(int argc, char *argv[]) {
     printf("Consumo de gasolina por cada 100 km: %f l | %f eur\n", usage100_l, usage100_eur);
     printf("Consumo de gasolina por km: %f l | %f eur\n", usage_l, usage_eur);
 
-    float avgSpeed_kmh, avgSpeed_ms, timeH;
-    timeH = hours + minutes / 60;
+    float avg_speed_kmh, avg_speed_ms, time_h;
+    time_h = hours + minutes / 60;
 
-    avgSpeed_kmh = km / timeH;
-    avgSpeed_ms = avgSpeed_kmh * 1000 / 3600;
+    avg_speed_kmh = km / time_h;
+    avg_speed_ms = avg_speed_kmh * 1000 / 3600;
 
-    printf("Velocidad media: %f km/h | %f m/s\n", avgSpeed_kmh, avgSpeed_ms);
+    printf("Velocidad media: %f km/h | %f m/s\n", avg_speed_kmh, avg_speed_ms);
 
     return 0;
 }

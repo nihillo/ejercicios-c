@@ -8,26 +8,26 @@
 */
 
 int main(int argc, char *argv[]) {
-    int arrSize = 3;
-    int intArr[3];
+    int arr_size = 3;
+    int int_arr[3];
 
-    printf("Primer número: "); scanf("%d", &intArr[0]);
-    printf("Segundo número: "); scanf("%d", &intArr[1]);
-    printf("Tercer número: "); scanf("%d", &intArr[2]);
+    printf("Primer número: "); scanf("%d", &int_arr[0]);
+    printf("Segundo número: "); scanf("%d", &int_arr[1]);
+    printf("Tercer número: "); scanf("%d", &int_arr[2]);
 
     int higher = -2147483648; // mínimo valor posible para int
-    bool equalHighers = false;
+    bool equal_highers = false;
 
-    for (int i = 0; i < arrSize; i++) {
-        if (intArr[i] == higher) {
-            equalHighers = intArr[i];
-        } else if (intArr[i] > higher) {
-            higher = intArr[i];
-            equalHighers = false;
+    for (int i = 0; i < arr_size; i++) {
+        if (int_arr[i] == higher) {
+            equal_highers = int_arr[i];
+        } else if (int_arr[i] > higher) {
+            higher = int_arr[i];
+            equal_highers = false;
         }
     }
 
-    if (equalHighers) {
+    if (equal_highers) {
         puts("Error: múltiples coincidencias de número más alto");
     } else {
         printf("El número más alto es %d\n", higher);

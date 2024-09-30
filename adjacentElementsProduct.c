@@ -15,7 +15,7 @@ arr_integer alloc_arr_integer(int len) {
 }
 
 
-int solution(arr_integer inputArray) {
+int solution(arr_integer input_array) {
 
 }
 

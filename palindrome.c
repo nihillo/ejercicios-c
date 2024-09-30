@@ -3,38 +3,38 @@
 #include <stdbool.h>
 #include <string.h>
 
-bool solution(char * inputString) {
-    bool isPalindrome = true;    
-    int length = strlen(inputString);
-    bool isOdd = (length % 2 != 0);
-    int stackLength = length/2;
-    char stack[stackLength];
+bool solution(char * input_string) {
+    bool is_palindrome = true;    
+    int length = strlen(input_string);
+    bool is_odd = (length % 2 != 0);
+    int stack_length = length/2;
+    char stack[stack_length];
 
-    int stackTop = stackLength - 1;
+    int stack_top = stack_length - 1;
     int i = 0;
     
 
-    while (isPalindrome == true && i < length) {
-        if (i < stackLength) {
-            stack[i] = inputString[i];
-        } else if (!(isOdd == true && i == stackLength)) {
-            if (inputString[i] != stack[stackTop]) {
-                isPalindrome = false;
+    while (is_palindrome == true && i < length) {
+        if (i < stack_length) {
+            stack[i] = input_string[i];
+        } else if (!(is_odd == true && i == stack_length)) {
+            if (input_string[i] != stack[stack_top]) {
+                is_palindrome = false;
             }
-            stackTop --;
+            stack_top --;
         }
 
         i++;
     }
 
-    return isPalindrome;
+    return is_palindrome;
 }
 
 
 int main(int argc, char *argv[]) {
-    char inputString[] = "ABACABA";
+    char input_string[] = "ABACABA";
     
-    if (solution(inputString)) {
+    if (solution(input_string)) {
         printf("Palíndromo\n");
     } else {
         printf("No palíndromo\n");
