@@ -3,7 +3,7 @@
 
 
 int main(int argc, char *argv[]) {
-    // float a[5];
+    float a[5];
 
     // for (int i = 0; i < 5; i++) {
     //     printf("Enter value for position %d: ", i);
